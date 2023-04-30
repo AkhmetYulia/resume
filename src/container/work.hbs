@@ -16,9 +16,11 @@
 							{{position}}
 						</div>
 						<br>
-						<div>
-							<b>{{company.name}}</b>
-						</div>
+						{{#unless company.url}}
+						<b>{{company.name}}</b>
+						{{else}}
+						<div>{{> link text=company.name href=company.url noLine=true}}</div>
+						{{/unless}}
 						<br>
 						<div>
 							{{duration.from}}
