@@ -4,22 +4,23 @@
 --}}
 
 <div>
+
 	{{#with main}}
 	<main>
-		<section>
-			{{> title data=summary.title big=true}}
-			<div>
-				<p>{{summary.text}}</p>
-			</div>
-		</section>
+
+		{{> title data=summary.title big=true}}
+		<div>
+			<p>{{summary.text}}</p>
+		</div>
+
 
 		{{#with experience}}
-		<section>
-			{{> title data=title}}
-			<div>
-				<p>{{text}}</p>
-			</div>
-		</section>
+
+		{{> title data=title}}
+		<div>
+			<p>{{text}}</p>
+		</div>
+
 		{{/with}}
 	</main>
 	{{/with}}
