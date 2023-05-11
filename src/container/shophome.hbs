@@ -1,0 +1,130 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+<main class="m-6">
+	<div class="col-12">
+		{{#with navigation}}
+		<div class="card m-0">
+			<ul>
+				<div class="nav">
+					{{#each links}}
+					<li>
+						<div class="nav-item pl-1"><a href="{{href}}" class="nav-link activ">{{text}}</a>
+					</li>
+					{{/each}}
+					<li>
+						<div class="nav-item pl-1"><a herf="#" class="nav-link disabled">Disabled</a>
+					</li>
+				</div>
+			</ul>
+		</div>
+		{{/with}}
+	</div>
+
+	<div class="row mt-1 mb-1 ms-1 me-1">
+		{{#with newsBlock}}
+		<h1 class="text-center">{{title}}</h1>
+		{{#each cards}}
+		<div class="card col-3 text-bg-dark mt-1 mb-1 ms-1 me-1">
+			<h5>{{title}}</h5>
+			{{#if isTop}}
+			<div class="badge text-bg-danger rounded-pill text-uppercase">Top</div>
+
+			{{/if}}
+			{{#if isNew}}
+			<div class="badge text-bg-success rounded-pill text-uppercase">New</div>
+			{{/if}}
+			<p>{{description}}</p>
+		</div>
+		{{/each}}
+		{{/with}}
+		<hr>
+	</div>
+	<div>
+		{{#with goodsBlock}}
+		<div class="col-12">
+			<ul class="nav nav-tabs">
+				<li class="nav-tabs-item">
+					{{#each tabs}}
+					<a class="nav-link
+					{{#if isActive}}{{/if}}{{#if isDisabled}}{{/if}}" aria-current="true" href="#">{{text}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div class="card mb-3">
+			<div class="row">
+				{{#each cards}}
+				<div class="col-3">
+					<img src="{{image}}" class="card-img-top">
+					<div class="card-body">
+						<h5 class="card-title">{{title}}</h5>
+						{{#if isHot}}
+						<div class="badge text-bg-warning rounded-pill text-uppercase">Hot</div>
+						{{/if}}
+						{{#if isNew}}
+						<div class="badge text-bg-primary rounded-pill text-uppercase">New</div>
+						{{/if}}
+						<p class="card-text">{{description}}</p>
+					</div>
+				</div>
+				{{/each}}
+				{{/with}}
+			</div>
+		</div>
+	</div>
+	<hr>
+	<section>
+		<div class="alert alert-dark" role="alert m-2">
+			{{#with subscribe}}
+			<h2>{{header}}</h2>
+			<p>{{description}}</p>
+			{{#each buttons}}
+			<div class="nav-item pl-1"><a href="{{link}}" class="btn btn-primary m-2">{{text}}</a>
+				{{/each}}
+				{{/with}}
+			</div>
+		</div>
+	</section>
+	<hr>
+	<section>
+		<div class="alert alert-success" role="alert m-2">
+			{{#with service}}
+			<div class="text-center">
+				<h2>{{title}}</h2>
+				<p>{{description}}</p>
+				{{#each buttons}}
+				<div class="nav-item pl-1"><a href="{{link}}" class="btn btn-primary m-2">{{text}}</a>
+				</div>
+				{{/each}}
+				{{/with}}
+			</div>
+		</div>
+	</section>
+	<hr>
+
+</main>
+
+<div class="row">
+	{{#each footer}}
+	<div class="col-1 g-5 m-5">
+		{{#each this}}
+		<div class="nav">
+			<div class="nav-item">
+				<a href="{{link}}" class="nav-link">{{text}}</a>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+	{{/each}}
+</div>
+
+
+
+
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
