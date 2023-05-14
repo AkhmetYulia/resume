@@ -1,115 +1,73 @@
-<main>
-    <h1 class="text-center text-uppercase">Hello world Start</h1>
-    <h2 class="text-end text-lowercase">Second</h2>
-    <h3 class="text-capitalize">3 title one two</h3>
-
-    <hr>
-
-    <div class="display-1 text-muted">Hello world</div>
-    <div class="display-5">Second</div>
-    <div class="display-6">3 title</div>
-
-    <hr>
-
-    <div class="text-muted text-end">
-        Додатковий<span class="display-5">текст</span>
-    </div>
-
-    <hr>
-
-    <button class="btn btn-primary">
-        <span class="text-uppercase">Button primary (Основна кнопка)</span>
-    </button>
-
-    <hr>
-
-    <p class="text-success">My text</p>
-
-    <hr>
-
-    <button class="btn btn-outline-primary">Додати</button>
-
-    <hr>
-
-    <button class="btn btn-outline-primary btn-lg">Редагувати</button>
-    <button class="btn btn-outline-primary btn-sm">Редагувати</button>
-
-    <hr>
-
-    <div class="card">
-        <div class="card-body">
-            This is content
+<main class="p-5">
+    <div class="row g-5">
+        <div class="col-12">
+            <label class="form-label">Email adress</label>
+            <input class="form-control">
+            <div class="form-text text-danger">Error</div>
+        </div>
+        <div class="col-12">
+            <label class="form-label">Email adress</label>
+            <div class="row">
+                <div class="col-3">
+                    <input disabled type="color" class="form-control form-control-lg">
+                </div>
+                <div class="col-3">
+                    <input disabled type="color" class="form-control form-control-sm">
+                </div>
+                <div class="col-3">
+                    <input disabled type="color" class="form-control">
+                </div>
+            </div>
+            <div class="form-text text-danger">Error</div>
         </div>
     </div>
-    <main>
-        <div class="row">
-            <div class="col-12 mb-4">
-                <div class="nav nav-tabs">
-                    <div class="nav-item">
-                        <a href="#" class="nav-link activ">Main</a>
-                    </div>
-                    <div class="nav-item">
-                        <a herf="#" class="nav-link disabled">Catalog</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="#" class="nav-link">Shop list</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-5 pe-5">
-                <div class="card">
-                    <div class="pt-4 pb-3 px-4">
-                        <div class="nav flex-column">
-                            <div class="nav-item mb-2">
-                                <div class="card">
-                                    <a href="/summary" class="nav-link">Home</a>
-                                </div>
-                            </div>
-
-                            <div class="nav-item mb-2">
-                                <div class="card">
-                                    <a herf="#" class="nav-link disabled">Bootstrep</a>
-                                </div>
-                            </div>
-
-                            <div class="nav-item mb-2">
-                                <div class="card">
-                                    <a href="/skills" class="nav-link">FAQ</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-7">
-                <div class="row">
-                    <div class="col-12">
-                        <ol class="beadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">PC and Nootbook</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="#">Macbook</a>
-                            </li>
-                        </ol>
-                    </div>
-                    <div class="col-12">
-                        <h6>Hello world! <span class="badge text-bg-primary rounded-pill text-uppercase">New</span></h6>
-                        <button class="btn btn-primary rounded-pill">Click me</button>
-                        <div class="alert alert-primary">
-                            This is important info
-                            <div class="mb-5">Hi</div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+    <hr>
+    <div class="col-12">
+        <label class="form-label">Select role</label>
+        <select class="form-select form-select-lg">
+            <option selected>Open list</option>
+            <option value="1">Admin</option>
+            <option value="2">User</option>
+        </select>
+        <div class="form-text text-danger">Error</div>
+    </div>
+    <hr>
+    <div class="col-12">
+        <div class="form-label">Select role</div>
+        <div class="form-check">
+            <label class="form-check-label">Apple</label>
+            <input name="food" type="checkbox" class="form-check-input">
         </div>
-
-    </main>
+        <div class="form-check">
+            <label class="form-check-label">Oragne</label>
+            <input name="food" type="checkbox" class="form-check-input">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">Banana</label>
+            <input name="food" type="checkbox" class="form-check-input">
+        </div>
+    </div>
+    <hr>
+    <div class="col-12">
+        <div class="form-label">Select role</div>
+        <div class="form-check">
+            <label class="form-check-label">Apple</label>
+            <input name="food" type="radio" class="form-check-input">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">Oragne</label>
+            <input name="food" type="radio" class="form-check-input">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">Banana</label>
+            <input name="food" type="radio" class="form-check-input">
+        </div>
+    </div>
+    <hr>
+    <div class="col-12">
+        <div class="form-check form-switch">
+            <label class="form-check-label">Get bonus</label>
+            <input name="food" type="checkbox" class="form-check-input">
+        </div>
+    </div>
 </main>
