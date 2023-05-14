@@ -32,9 +32,12 @@
 		<h3>{{title}}</h3>
 		<h4>{{amount}}</h4>
 		<h6>{{delivery}}</h6>
-		{{#each buttons}}
-		<a href="{{link}}" class="btn btn-outline-success {{#if isSuccess}}{{/if}}{{#if isOutline}}{{/if}}">{{text}}</a>
-		{{/each}}
+		<div class="mt-5">
+			{{#each buttons}}
+			<a href="{{link}}"
+				class="btn btn-outline-success {{#if isSuccess}}{{/if}}{{#if isOutline}}{{/if}}">{{text}}</a>
+			{{/each}}
+		</div>
 		{{/with}}
 	</div>
 	<hr>
