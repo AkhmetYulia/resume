@@ -1,0 +1,91 @@
+<main>
+    <div class="card">
+        <div class="card-body">
+            {{#with navigation}}
+            <div class="row">
+                {{#each links}}
+                <div class="col-2">
+                    <a href="{{href}}" class="nav-link text-primary">{{text}}</a>
+                </div>
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+    </div>
+    <div class="pt-5">
+        {{#with header}}
+        <h1>{{title}}</h1>
+        <div class="pt-3 pb-5">
+            {{#with button}}
+            <a href="{{link}}" class="btn btn-outline-dark">{{text}}</a>
+        </div>
+        {{/with}}
+        {{/with}}
+        <hr>
+    </div>
+    <div>
+        {{> cartGoodsItem goodsBlock=goodsBlock}}
+    </div>
+    <hr>
+    <div class="mt-5 mb-5">
+        {{#with total}}
+        <h3>{{title}}</h3>
+        <h4>{{amount}}</h4>
+        <h6>{{delivery}}</h6>
+        <div class="mt-5">
+            {{#each buttons}}
+            <a href="{{link}}"
+                class="btn btn-outline-success {{#if isSuccess}}{{/if}}{{#if isOutline}}{{/if}}">{{text}}</a>
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+    <hr>
+    <div class="row ms-2">
+        {{#with goodsOtherBlock}}
+        <h3 class="text-center">{{title}}</h3>
+        {{#each cards}}
+        <div class="card mx-2" style="width: 18rem;">
+            <img src="{{image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                {{#if isHot}}
+                <div class="badge text-bg-danger rounded-pill text-uppercase">Hot</div>
+                {{/if}}
+                {{#if idNew}}
+                <div class="badge text-bg-success rounded-pill text-uppercase">New</div>
+                {{/if}}
+                <p class="card-text">{{description}}</p>
+            </div>
+        </div>
+        {{/each}}
+        {{/with}}
+    </div>
+    <hr>
+    <div>
+        {{#with subscribe}}
+        <div class="alert alert-dark" role="alert">
+            <h2>{{header}}</h2>
+            {{description}}
+            <div class="mt-2">
+                {{#each buttons}}
+                <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </div>
+</main>
+<div class="row">
+    {{#each footer}}
+    <div class="col-1 g-5 m-5">
+        {{#each this}}
+        <div class="nav">
+            <div class="nav-item">
+                <a href="{{link}}" class="nav-link">{{text}}</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,219 @@
+<div>
+    <main>
+        <ul>
+            <h1><b>{{name}}</b></h1>
+            <br>
+            <div class="alert alert-warning" role="alert">
+                <h2>
+                    {{users.[0].id}}
+                    {{users.[0].name}}
+                    {{users.[0].gender}}
+                    {{users.[0].age}}
+                </h2>
+            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <ul>
+                            <span class="badge text-bg-danger"><b>Friends</b></span>
+
+                            {{users.[0].friends.[0].id}}
+                            {{users.[0].friends.[0].name}}
+                            {{users.[0].friends.[0].gender}}
+                            {{users.[0].friends.[0].age}}
+                        </ul>
+                        <ul>
+                            <span class="badge text-bg-light"><b>Mutual friends</b></span>
+                            <br>
+                            {{users.[0].friends.[0].mutual_friends.[0].id}}
+                            {{users.[0].friends.[0].mutual_friends.[0].name}}
+                            {{users.[0].friends.[0].mutual_friends.[0].gender}}
+                            {{users.[0].friends.[0].mutual_friends.[0].age}}
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul>
+                            <span class="badge text-bg-danger"><b>Friends</b></span>
+
+                            {{users.[0].friends.[1].id}}
+                            {{users.[0].friends.[1].name}}
+                            {{users.[0].friends.[1].gender}}
+                            {{users.[0].friends.[1].age}}
+                        </ul>
+                        <ul>
+                            <span class="badge text-bg-light"><b>Mutual friends</b></span>
+                            <br>
+                            {{users.[0].friends.[1].mutual_friends.[0].id}}
+                            {{users.[0].friends.[1].mutual_friends.[0].name}}
+                            {{users.[0].friends.[1].mutual_friends.[0].gender}}
+                            {{users.[0].friends.[1].mutual_friends.[0].age}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <ul>
+
+                            <span class="badge rounded-pill text-bg-secondary"><b>Groups</b></span>
+                            <li>{{users.[0].groups.[0].id}}</li>
+                            <li>{{users.[0].groups.[0].name}}</li>
+                            <li>{{users.[0].groups.[0].description}}</li>
+
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Members
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>
+                                                <li>
+                                                    {{users.[0].groups.[0].members.[0].id}}
+                                                    {{users.[0].groups.[0].members.[0].name}}
+                                                    {{users.[0].groups.[0].members.[0].gender}}
+                                                    {{users.[0].groups.[0].members.[0].age}}
+                                                </li>
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul>
+
+                            <span class="badge rounded-pill text-bg-secondary"><b>Groups</b></span>
+                            <li>{{users.[0].groups.[1].id}}</li>
+                            <li>{{users.[0].groups.[1].name}}</li>
+                            <li>{{users.[0].groups.[1].description}}</li>
+
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Members
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>
+                                                <li>
+                                                    {{users.[0].groups.[1].members.[0].id}}
+                                                    {{users.[0].groups.[1].members.[0].name}}
+                                                    {{users.[0].groups.[1].members.[0].gender}}
+                                                    {{users.[0].groups.[1].members.[0].age}}
+                                                </li>
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="alert alert-warning" role="alert">
+                <h2>
+                    {{users.[1].id}}
+                    {{users.[1].name}}
+                    {{users.[1].gender}}
+                    {{users.[1].age}}
+                </h2>
+            </div>
+            <ul>
+                <b>Friends</b>
+                {{users.[1].friends.[0].id}}
+                {{users.[1].friends.[0].name}}
+                {{users.[1].friends.[0].gender}}
+                {{users.[1].friends.[0].age}}
+                <div>
+                    <li>
+                        <b>Mutual friends</b>
+                    </li>
+                </div>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    {{users.[1].friends.[0].mutual_friends.[0].id}}
+                                    {{users.[1].friends.[0].mutual_friends.[0].name}}
+                                    {{users.[1].friends.[0].mutual_friends.[0].gender}}
+                                    {{users.[1].friends.[0].mutual_friends.[0].age}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    {{users.[1].friends.[0].mutual_friends.[1].id}}
+                                    {{users.[1].friends.[0].mutual_friends.[1].name}}
+                                    {{users.[1].friends.[0].mutual_friends.[1].gender}}
+                                    {{users.[1].friends.[0].mutual_friends.[1].age}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    <b>Groups</b>
+                                    {{users.[1].friends.[0].groups.[0].id}}
+                                    {{users.[1].friends.[0].groups.[0].name}}
+                                    {{users.[1].friends.[0].groups.[0].description}}
+                                </li>
+                                <li>
+                                    <b>Members</b>
+                                    {{users.[1].friends.[0].groups.[0].members.[0].id}}
+                                    {{users.[1].friends.[0].groups.[0].members.[0].name}}
+                                    {{users.[1].friends.[0].groups.[0].members.[0].gender}}
+                                    {{users.[1].friends.[0].groups.[0].members.[0].age}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>
+                                    <b>Groups</b>
+                                    {{users.[1].friends.[0].groups.[1].id}}
+                                    {{users.[1].friends.[0].groups.[1].name}}
+                                    {{users.[1].friends.[0].groups.[1].description}}
+                                </li>
+                                <li>
+                                    <b>Members</b>
+                                    {{users.[1].friends.[0].groups.[1].members.[0].id}}
+                                    {{users.[1].friends.[0].groups.[1].members.[0].name}}
+                                    {{users.[1].friends.[0].groups.[1].members.[0].gender}}
+                                    {{users.[1].friends.[0].groups.[1].members.[0].age}}
+                                </li>
+                                <li>
+                                    <b>Members</b>
+                                    {{users.[1].friends.[0].groups.[1].members.[1].id}}
+                                    {{users.[1].friends.[0].groups.[1].members.[1].name}}
+                                    {{users.[1].friends.[0].groups.[1].members.[1].gender}}
+                                    {{users.[1].friends.[0].groups.[1].members.[1].age}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+    </main>
+</div>

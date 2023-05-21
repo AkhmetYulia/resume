@@ -1,0 +1,86 @@
+<div>
+    <h1>Web languages</h1>
+    <hr>
+    <section>
+        {{#with web}}
+        <ul>
+            <li>
+                <b>{{languages.[0].name}}</b>
+            </li>
+            <ul>
+                <li>Version: {{languages.[0].version}}</li>
+                <li>Description: {{languages.[0].description}}</li>
+            </ul>
+            <em>
+                {{#each languages.[0].elements}}
+                <ul>
+                    <li>{{this.name}}</li>
+                    <li>{{this.description}}</li>
+
+                    {{#each attributes}}
+                    <ul>
+                        <li>{{name}}</li>
+                        <li>{{description}}</li>
+                    </ul>
+                    {{/each}}
+                    {{/each}}
+            </em>
+        </ul>
+    </section>
+    <hr>
+    <section>
+        <ul>
+            <li>
+                <b>{{languages.[1].name}}</b>
+            </li>
+            <ul>
+                <li>Version: {{languages.[1].version}}</li>
+                <li>Description: {{languages.[1].description}}</li>
+            </ul>
+            <em>
+                {{#each languages.[1].properties}}
+                <ul>
+                    <li>{{this.name}}</li>
+                    <li>{{this.description}}</li>
+
+                    {{#each values}}
+                    <ul>
+                        <li>{{value}}</li>
+                        <li>{{description}}</li>
+                    </ul>
+                    {{/each}}
+                    {{/each}}
+            </em>
+        </ul>
+    </section>
+    <hr>
+    <section>
+        <ul>
+            <li>
+                <b>{{languages.[2].name}}</b>
+            </li>
+            <ul>
+                <li>Version: {{languages.[2].version}}</li>
+                <li>Description: {{languages.[2].description}}</li>
+            </ul>
+            <em>
+                {{#each languages.[2].functions}}
+                <ul>
+                    <li>{{this.name}}</li>
+                    <li>{{this.description}}</li>
+
+                    {{#each parameters}}
+                    <ul>
+                        <li>{{name}}</li>
+                        <li>{{type}}</li>
+                        <li>{{description}}</li>
+                    </ul>
+                    {{/each}}
+                    {{/each}}
+            </em>
+        </ul>
+    </section>
+    <hr>
+    {{/with}}
+    </ul>
+</div>
